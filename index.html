@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rob White | Professional Portfolio</title>
+  <meta name="description" content="Rob White: professional profile, experience and featured posts.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#posts">Posts</a>
+      <a class="btn small" id="navLinkedin" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow" id="location"></p>
+      <h1 id="name"></h1>
+      <p class="lead" id="headline"></p>
+      <div class="cta">
+        <a class="btn" href="#posts">Read my posts</a>
+        <a class="btn ghost" id="heroLinkedin" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+      <ul class="stats" id="stats"></ul>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div id="aboutText"></div>
+      <ul class="chips" id="skills" aria-label="Skills"></ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section id="posts">
+      <h2>Featured posts</h2>
+      <div class="grid" id="postGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> <span id="footName"></span> · <a id="footLinkedin" target="_blank" rel="noopener">LinkedIn</a></p>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
