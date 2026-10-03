@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Paws Dog Walking</title>
+  <meta name="description" content="Reliable, loving dog walks and pet visits. Book a walk today.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top">🐾 Happy Paws</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a class="btn btn-small" href="#book">Book a walk</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Happy dogs. <span>Happy owners.</span></h1>
+        <p>Insured, experienced and fully background-checked dog walkers who treat your best friend like their own.</p>
+        <a class="btn" href="#book">Book a walk</a>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">🐕</div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Our services</h2>
+      <div class="cards">
+        <article class="card"><div class="icon">🚶</div><h3>Solo walks</h3><p>One-on-one attention, tailored to your dog's pace and energy.</p></article>
+        <article class="card"><div class="icon">🐕‍🦺</div><h3>Group walks</h3><p>Small, well-matched groups for social pups who love a pack.</p></article>
+        <article class="card"><div class="icon">🏠</div><h3>Drop-in visits</h3><p>Potty breaks, feeding and cuddles while you're at work.</p></article>
+        <article class="card"><div class="icon">🐶</div><h3>Puppy care</h3><p>Gentle, frequent visits to help young dogs settle and learn.</p></article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section alt">
+      <h2>Simple pricing</h2>
+      <div class="cards">
+        <article class="card price"><h3>30 min walk</h3><p class="amount">$20</p><p>Perfect for a quick midday break.</p></article>
+        <article class="card price featured"><h3>60 min walk</h3><p class="amount">$32</p><p>Our most popular — a proper adventure.</p></article>
+        <article class="card price"><h3>Drop-in visit</h3><p class="amount">$15</p><p>20 minutes of care at home.</p></article>
+      </div>
+      <p class="note">Multi-dog households get 25% off each additional dog. Prices are examples — edit to suit.</p>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>Meet your walker</h2>
+      <p>Hi, I'm Alex! I've spent over eight years caring for dogs of every shape and size. I'm pet first-aid certified, fully insured, and I send a photo update after every walk so you always know how your pup's day went.</p>
+      <ul class="badges">
+        <li>✅ Insured &amp; bonded</li>
+        <li>✅ Pet first-aid certified</li>
+        <li>✅ Photo updates every walk</li>
+        <li>✅ Free meet &amp; greet</li>
+      </ul>
+    </section>
+
+    <section id="reviews" class="section alt">
+      <h2>What clients say</h2>
+      <div class="cards">
+        <blockquote class="card">“Biscuit sprints to the door when Alex arrives. Best decision we ever made!”<cite>— Priya &amp; Biscuit</cite></blockquote>
+        <blockquote class="card">“Reliable, kind and always communicative. The photo updates make my day.”<cite>— Tom &amp; Luna</cite></blockquote>
+        <blockquote class="card">“Our anxious rescue finally enjoys walks. Can't thank them enough.”<cite>— Marta &amp; Gus</cite></blockquote>
+      </div>
+    </section>
+
+    <section id="book" class="section">
+      <h2>Book a walk</h2>
+      <form id="book-form" class="form" novalidate>
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Dog's name<input name="dog" required></label>
+        <label>Service
+          <select name="service">
+            <option>30 min walk</option>
+            <option>60 min walk</option>
+            <option>Group walk</option>
+            <option>Drop-in visit</option>
+          </select>
+        </label>
+        <label>Preferred date<input name="date" type="date" required></label>
+        <label class="full">Notes<textarea name="notes" rows="3" placeholder="Anything we should know? Quirks, medications, favourite treats…"></textarea></label>
+        <button class="btn full" type="submit">Request booking</button>
+        <p id="form-msg" class="form-msg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>🐾 Happy Paws Dog Walking · hello@happypaws.example · (555) 123-4567</p>
+    <p>&copy; <span id="year"></span> Happy Paws. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
