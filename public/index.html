@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VAT Registration Checker</title>
+  <meta name="description" content="Bulk UK VAT registration checks against HMRC with a tamper-evident audit trail.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/" aria-label="VAT Registration Checker home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-text"><strong>Forvis Mazars</strong><em>VAT Registration Checker</em></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#/" data-nav="home">Overview</a>
+        <a href="#/bulk" data-nav="bulk">Bulk check</a>
+        <a href="#/quick" data-nav="quick">Quick check</a>
+        <a href="#/batches" data-nav="batches">Batches</a>
+        <a href="#/insights" data-nav="insights">Insights</a>
+        <a href="#/audit" data-nav="audit">Audit log</a>
+      </nav>
+      <div class="topbar-right">
+        <span id="modeBadge" class="mode-badge" title="Where checks are sent"></span>
+        <button id="userBtn" class="user-chip" type="button" aria-label="Change user"></button>
+        <button id="menuBtn" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+  <div id="simBanner" class="sim-banner" hidden>
+    Simulation mode — results are generated locally and are <strong>not</strong> real HMRC data. Connect HMRC credentials to go live (see <a href="#/help">setup</a>).
+  </div>
+  <main id="main" tabindex="-1"></main>
+  <footer class="footer">
+    <div>VAT Registration Checker · Checks via HMRC <em>Check a UK VAT number</em> API v2.0</div>
+    <div><a href="#/help">Help &amp; setup</a></div>
+  </footer>
+
+  <div id="drawer" class="drawer" hidden aria-hidden="true">
+    <div class="drawer-backdrop" data-close></div>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <button class="drawer-close" data-close aria-label="Close">×</button>
+      <div id="drawerBody"></div>
+    </aside>
+  </div>
+
+  <dialog id="userDialog" class="dialog">
+    <form method="dialog" id="userForm">
+      <h2>Who's running checks?</h2>
+      <p class="muted">Your name is recorded against every check, review and export in the audit log.</p>
+      <label class="field"><span>Full name</span><input id="userName" required autocomplete="name" placeholder="e.g. Priya Shah"></label>
+      <div class="dialog-actions"><button class="btn primary" value="ok">Continue</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="tip" class="chart-tip" role="tooltip" hidden></div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
